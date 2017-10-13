@@ -1,0 +1,21 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"id": "AIO_subscribe",
+	"type": "object",
+	"properties":{
+		"direction":"subscribe",
+		"variable":{
+			"type":"name", 
+			"$comment":"This must be the name of a variable that does not exist in the MOOS community",
+			"$comment":"It will be published to MOOSDB from the given AIO feed"
+		},
+		"varType":{
+			"type":"string",
+			"enum": ["DOUBLE", "STRING", "BINARY"],
+			"$comment": "Must match the type of the named variable"
+		},
+		"group":{"type":"string"},
+		"feed":{"type":"string"}
+	},
+	"required":["direction","variable","varType","feed"]
+}

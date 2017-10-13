@@ -1,0 +1,15 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"id": "AIO_conf",
+	"type": "object",
+	"properties":{
+		"url": {
+			"type":"string",
+			"format":"uri"
+		},
+		"username":{"type":"string"},
+		"key":{"type":"string"}
+	},
+	"required":["url","username","key"],
+	"additionalProperties":false
+}

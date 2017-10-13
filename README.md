@@ -11,6 +11,7 @@ This is a connector between a MOOS community and Adafruit.io using the REST inte
 ```
 {
 	"$schema": "http://json-schema.org/schema#",
+	"id": "AIO_conf",
 	"type": "object",
 	"properties":{
 		"url": {
@@ -29,16 +30,18 @@ Specifying the REST key in this manner permits storing the sensitive username an
 ```
 {
 	"$schema": "http://json-schema.org/schema#",
+	"id": "AIO_publish",
 	"type": "object",
 	"properties":{
 		"direction":"publish",
 		"variable":{
 			"type":"name", 
-			"$comment":"This must be the name of a variable that exists in the MOOS community"
+			"$comment":"This must be the name of a variable that exists in the MOOS community",
 			"$comment":"It will be subscribed from MOOSDB and published to AIO on the given feed"
 		},
 		"varType":{
-			"type":"string","enum": ["DOUBLE", "STRING", "BINARY"],
+			"type":"string",
+			"enum": ["DOUBLE", "STRING", "BINARY"],
 			"$comment": "Must match the type of the named variable"
 		},
 		"group":{"type":"string"},
@@ -52,16 +55,18 @@ Specifying the REST key in this manner permits storing the sensitive username an
 ```
 {
 	"$schema": "http://json-schema.org/schema#",
+	"id": "AIO_subscribe",
 	"type": "object",
 	"properties":{
 		"direction":"subscribe",
 		"variable":{
 			"type":"name", 
-			"$comment":"This must be the name of a variable that does not exist in the MOOS community"
+			"$comment":"This must be the name of a variable that does not exist in the MOOS community",
 			"$comment":"It will be published to MOOSDB from the given AIO feed"
 		},
 		"varType":{
-			"type":"string","enum": ["DOUBLE", "STRING", "BINARY"],
+			"type":"string",
+			"enum": ["DOUBLE", "STRING", "BINARY"],
 			"$comment": "Must match the type of the named variable"
 		},
 		"group":{"type":"string"},
