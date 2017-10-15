@@ -1,12 +1,12 @@
-# MOOS-AIOrest
-This is a connector between a MOOS community and Adafruit.io using the REST interface. The purpose of this module is to provide an easily configurable way to connect MOOS variables to Adafruit.io feeds.
+# MOOS-pAIOrest
+This is a connector between a MOOS community and Adafruit.io using the REST interface. The purpose of pAIOrest is to provide an easily configurable way to connect MOOS variables to Adafruit.io feeds.
 
-# Dependencies
+## Dependencies
 * MOOS-IvP
 * https://github.com/Tencent/rapidjson/ -- provides JSON parse/deparse
 * https://curl.haxx.se/libcurl/ -- provides HTTP client interface
 
-# Configuration Parameters
+## Configuration Parameters
 * AIOconf -- the path to a file containing JSON defining the overall connection. It must conform to the following schema:
 ```
 {
@@ -84,11 +84,11 @@ Specifying the REST key in this manner permits storing the sensitive username an
 * pubFrequency -- the number of times per minute to publish outgoing data. Defaults to 60.
 * subFrequency -- the number of times per minute to poll for incoming data. Defaults to same value as ```pubFrequency```. 
 
-# Incoming and Outgoing Variables
+## Incoming and Outgoing Variables
 This is determined entirely by the publish and subscribe entries
 
-# Outgoing Timing and Sequencing
-Since Adafruit.io has hard limits on how often data can be written, this module must obey them in order to work correctly. It maintains a list of outgoing variables and steps through them one by one at the speed dictated by ```pubFrequency```. If a variable has not been updated since the last time it was transmitted, this module will skip it until the next time it runs through the list. 
+## Outgoing Timing and Sequencing
+Since Adafruit.io has hard limits on how often data can be written, pAIOrest must obey them in order to work correctly. It maintains a list of outgoing variables and steps through them one by one at the speed dictated by ```pubFrequency```. If a variable has not been updated since the last time it was transmitted, pAIOrest will skip it until the next time it runs through the list. 
 
-# Incoming Notifications
-A list of incoming variables is similarly maintained. The module polls for each one in turn at the frequency determined by ```subFrequency```.
+## Incoming Notifications
+A list of incoming variables is similarly maintained. pAIOrest polls for each one in turn at the frequency determined by ```subFrequency```.
