@@ -34,6 +34,10 @@ Specifying the REST key in this manner permits storing the sensitive username an
 	"type": "object",
 	"properties":{
 		"direction":"publish",
+		"updateOnly": {
+			"type": "boolean",
+			"$comment": "If this is true, the publish routine skips this variable if it has not changed since the last transmission."
+		},
 		"variable":{
 			"type":"name", 
 			"$comment":"This must be the name of a variable that exists in the MOOS community",
