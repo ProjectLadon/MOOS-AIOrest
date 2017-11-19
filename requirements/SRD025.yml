@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 1.2.4
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The configuration file **may** contain one ```subFile``` entries in addition to any ```subscribe``` entries. If present, it **must** contain a JSON array of ```subscribe``` objects. This module **shall** load the file and process its elements as if they were additional ```subscribe``` entries.

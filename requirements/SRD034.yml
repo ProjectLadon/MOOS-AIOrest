@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 1.2.9.2
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  If it is not present, it **shall** default to ```pubFrequency```.

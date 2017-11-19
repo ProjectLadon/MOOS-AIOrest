@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 1.2.3.5
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The document **may** contain a ```group``` key. If present, this module **shall** subscribe to the named feed in the named group.

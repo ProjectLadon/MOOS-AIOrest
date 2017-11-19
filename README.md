@@ -36,7 +36,7 @@ Specifying the REST key in this manner permits storing the sensitive username an
 		"direction":"publish",
 		"updateOnly": {
 			"type": "boolean",
-			"$comment": "If this is true, the publish routine skips this variable if it has not changed since the last transmission."
+			"$comment": "If this is true, the publish routine skips this variable if it has not changed since the last transmission. It defaults to true."
 		},
 		"variable":{
 			"type":"name", 
@@ -80,6 +80,7 @@ Specifying the REST key in this manner permits storing the sensitive username an
 }
 ```
 * subFile -- a path to a file containing an array of ```subscribe``` objects. This can be used in conjunction with zero or more ```subscribe``` entries.
+* pubFile -- a path to a file containing an array of ```publish``` objects. This can be used in conjunction with zero or more ```publish``` entries.
 * confFile -- a path to a file containing an array of ```publish``` and/or ```subscribe``` objects. This can be used in conjunction with any other combination of publish and subscribe objects. 
 * pubFrequency -- the number of times per minute to publish outgoing data. Defaults to 60.
 * subFrequency -- the number of times per minute to poll for incoming data. Defaults to same value as ```pubFrequency```. 

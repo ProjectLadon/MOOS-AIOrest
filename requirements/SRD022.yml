@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 1.2.3.3
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The document **must** contain a ```varType``` key, which **must** name a MOOS type. This module **shall** publish the variable as the given type.

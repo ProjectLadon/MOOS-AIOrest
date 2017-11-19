@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 1.2.1.2
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The document **must** contain a ```url``` key pointing to the desired server, and the module **shall** make all connections to the specified server.

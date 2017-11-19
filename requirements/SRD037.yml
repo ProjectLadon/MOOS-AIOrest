@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 1.2.2.6
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The document **may** contain an ```updateOnly``` key. If it is true, then this module **shall** publish this item only when it is updated.

@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 1.2.7
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  If any of the file entries point to a file that is either missing or fails JSON validation, this module **shall** log an error and exit.

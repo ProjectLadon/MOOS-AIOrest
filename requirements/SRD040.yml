@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.3
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  If an item has updateOnly set to true, then it **shall** be skipped unless the underlying MOOS variable has been updated since the last transmission.

@@ -1,0 +1,11 @@
+active: true
+derived: false
+level: 2.0
+links: []
+normative: false
+ref: ''
+reviewed: null
+text: |
+  Outgoing Data
+
+  Adafruit.io limits incoming data updates to 60 data points per minute.

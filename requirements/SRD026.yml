@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 1.2.5
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The configuration file **may** contain one ```pubFile``` entries in addition to any ```publish``` entries. If present, it **must** contain a JSON array of ```publish``` objects. This module **shall** load the file and process its elements as if they were additional ```publish``` entries.

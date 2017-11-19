@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 1.2.2.3
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The document **must** contain a ```varType``` key. This **must** name the MOOS type of variable that the ```variable``` key points at. This module **shall** reject the variable if it is not of the named type.

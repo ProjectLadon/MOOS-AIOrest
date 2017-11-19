@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 3.2
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  Each subscribed feed **shall** be publishd to its corresponding MOOS variable if and only if a new data item is retrieved from the feed.

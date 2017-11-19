@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  Every 60/pubFrequency seconds, this module **shall** transmit one published item to the server.

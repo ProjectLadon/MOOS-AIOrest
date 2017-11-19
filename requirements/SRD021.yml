@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 1.2.3.2
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The document **must** contain a ```variable``` key. The module **shall** publish to a community variable of that name.

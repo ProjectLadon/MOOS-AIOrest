@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 1.2.6
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The configuration file **may** contain one ```confFile``` entries in addition to any ```publish```, ```subscribe```, ```subFile```, and ```pubFile``` entries. If present, it **must** contain a JSON array of ```publish``` and ```subscribe``` objects. This module **shall** load the file and process its elements as if they were additional ```publish``` and ```subscribe``` entries.

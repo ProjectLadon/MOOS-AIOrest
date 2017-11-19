@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 1.2.2.4
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The document **must** contain a ```feed``` key. This module **shall** publish the values received on ```variable``` to this feed.

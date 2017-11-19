@@ -1,0 +1,11 @@
+active: true
+derived: false
+level: 1.0
+links: []
+normative: false
+ref: ''
+reviewed: null
+text: |
+  MOOS Adafruit IO interface module
+
+  This is a connector between a MOOS community and Adafruit.io using the REST interface. The purpose of pAIOrest is to provide an easily configurable way to connect MOOS variables to Adafruit.io feeds.

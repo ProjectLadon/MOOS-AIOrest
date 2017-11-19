@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 1.2.2.0
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The configuration file **may** contain one or more ```publish``` entries.
