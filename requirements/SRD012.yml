@@ -4,6 +4,6 @@ level: 1.2.1.4
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: aad2081a2f075e43dd5523d306b53324
 text: |
   The document **must** contain a ```key``` key. The module **shall** use this API key when logging into the server.

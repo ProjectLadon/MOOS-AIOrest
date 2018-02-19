@@ -4,6 +4,6 @@ level: 3.1
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: e2fec700c50d260a1ad167fd132341cf
 text: |
   Every 60/subFrequency seconds, this module **shall** query all subscribed feeds.

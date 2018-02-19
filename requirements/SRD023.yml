@@ -4,6 +4,6 @@ level: 1.2.3.4
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: d7585bcb90a2137866ddf4580f34b842
 text: |
   The document **must** contain a ```feed``` key. This module **shall** publish the values received from this feed on ```variable```.

@@ -4,7 +4,7 @@ level: 1.0
 links: []
 normative: false
 ref: ''
-reviewed: null
+reviewed: bebd835f4ac852346f16f5f932a72a95
 text: |
   MOOS Adafruit IO interface module
 

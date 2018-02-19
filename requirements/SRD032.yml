@@ -4,6 +4,6 @@ level: 1.2.9.0
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: 20091cf8235abc6af45add3a8d5f2b6f
 text: |
   The configuration file **may** contain a ```subFrequency``` entry.

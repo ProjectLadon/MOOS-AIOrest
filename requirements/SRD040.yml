@@ -4,6 +4,6 @@ level: 2.3
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: 3781078a53469c1a61b49fd2ad001eb4
 text: |
   If an item has updateOnly set to true, then it **shall** be skipped unless the underlying MOOS variable has been updated since the last transmission.

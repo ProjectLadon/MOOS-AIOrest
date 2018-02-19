@@ -4,6 +4,6 @@ level: 1.2.9.1
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: 8619b1b5052d545a115309952df93579
 text: |
   If present, this **shall** set the number of times per minute to poll for incoming data.

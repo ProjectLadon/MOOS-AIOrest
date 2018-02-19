@@ -4,6 +4,6 @@ level: 1.2.2.0
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: ee3a12630bb63b950ee19a496ffcd75c
 text: |
   The configuration file **may** contain one or more ```publish``` entries.

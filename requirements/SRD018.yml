@@ -4,6 +4,6 @@ level: 1.2.2.5
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: 7099906af51c5a7c8f109f8d0fcd192a
 text: |
   The document **may** contain a ```group``` key. If present, this module **shall** publish to the named feed in the named group.

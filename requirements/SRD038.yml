@@ -4,6 +4,6 @@ level: 2.1
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: 4cc2a908f19ffa75de4afd5c989576c1
 text: |
   Every 60/pubFrequency seconds, this module **shall** transmit one published item to the server.

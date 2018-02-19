@@ -4,6 +4,6 @@ level: 1.2.7
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: 6442382a74d12dbc6fcc0be48e00cecd
 text: |
   If any of the file entries point to a file that is either missing or fails JSON validation, this module **shall** log an error and exit.

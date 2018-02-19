@@ -4,6 +4,6 @@ level: 1.2.8.0
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: 8e901ea6a2e5a758e746e0628b42cd85
 text: |
   The configuration file **may** contain a ```pubFrequency``` entry.

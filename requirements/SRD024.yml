@@ -4,6 +4,6 @@ level: 1.2.3.5
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: c2bc8afc93e7ea184decd3679591ae56
 text: |
   The document **may** contain a ```group``` key. If present, this module **shall** subscribe to the named feed in the named group.

@@ -4,6 +4,6 @@ level: 1.2.1.0
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: 917bf79695c7e81f01ef592bc2ea5559
 text: |
   The configuration file **must** contain one and only one ```AIOconf``` entries.

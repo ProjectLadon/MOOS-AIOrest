@@ -4,6 +4,6 @@ level: 1.1.2
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: 588258e632fac0e81faf52ec906a2546
 text: |
   This module **shall** use libcurl as the HTTP client.

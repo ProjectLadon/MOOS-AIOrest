@@ -4,6 +4,6 @@ level: 1.2.8.1
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: 537fc3a7ce627270ac7df0c9972766d4
 text: |
   If present, this **shall** set the number of times per minute to publish outgoing data.

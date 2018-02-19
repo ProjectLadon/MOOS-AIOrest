@@ -4,6 +4,6 @@ level: 1.2.3.0
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: 9ca8ef508b1036c94d162b73c5d52aad
 text: |
   The configuration file **may** contain one or more ```subscribe``` entries.

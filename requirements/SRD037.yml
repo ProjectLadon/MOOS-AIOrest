@@ -4,6 +4,6 @@ level: 1.2.2.6
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: 5a4c60b68ab375f039bc698e574bcdf6
 text: |
   The document **may** contain an ```updateOnly``` key. If it is true, then this module **shall** publish this item only when it is updated.

@@ -15,14 +15,21 @@ class AIOrest : public AppCastingMOOSApp
  public:
    AIOrest();
    ~AIOrest();
+   bool notifyString(const std::string &var, const std::string &val) {
+	   Notify(var, val);
+   };
+   bool notifyDouble(const std::string &var, const double &val) {
+	   Notify(var, val);
+   };
+   bool registerVar(const std::string &var) {Register(var);};
 
- protected: // Standard MOOSApp functions to overload  
+ protected: // Standard MOOSApp functions to overload
    bool OnNewMail(MOOSMSG_LIST &NewMail);
    bool Iterate();
    bool OnConnectToServer();
    bool OnStartUp();
 
- protected: // Standard AppCastingMOOSApp function to overload 
+ protected: // Standard AppCastingMOOSApp function to overload
    bool buildReport();
 
  protected:
@@ -33,4 +40,4 @@ class AIOrest : public AppCastingMOOSApp
  private: // State variables
 };
 
-#endif 
+#endif

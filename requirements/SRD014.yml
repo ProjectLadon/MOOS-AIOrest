@@ -4,6 +4,6 @@ level: 1.2.2.1
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: dabe0152fa3d451cfd351a092543b5e8
 text: |
   The value of each entry **must** be a JSON document conforming to schema/publish_schema.json.

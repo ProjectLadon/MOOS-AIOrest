@@ -4,6 +4,6 @@ level: 1.2.9.2
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: 7d6aa7fb46f811d20b14f79af5112e77
 text: |
   If it is not present, it **shall** default to ```pubFrequency```.
