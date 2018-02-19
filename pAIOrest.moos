@@ -1,0 +1,9 @@
+//------------------------------------------------
+// pAIOrest config block
+
+ProcessConfig = pAIOrest
+{
+   AppTick   = 4
+   CommsTick = 4
+}
+
