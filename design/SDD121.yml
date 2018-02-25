@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.5.2.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```bool publish()```**shall** call ```iface->put()``` with the string returned by ```encode()``` and return ```true``` if successful. Success **shall** be defined as an HTTP response code equal to 200 and a valid JSON response.

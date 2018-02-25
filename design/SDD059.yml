@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.1.4.5
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```double lon``` **shall** store the longitude

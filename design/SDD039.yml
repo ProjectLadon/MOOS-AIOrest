@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.1.2.6.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  This method **shall** call the ```procMail()``` method of each member of the ```publishers()``` list.

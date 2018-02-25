@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.1.2.1.3
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  If it does not parse or fails validation, this method **shall** return ```nullptr```.

@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: '4.10'
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  On a ```pubFrequency``` key, the software **shall** attempt to extract an integer from the value and store it in ```pubFrequency```.

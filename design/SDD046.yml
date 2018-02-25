@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.1.2.10
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```bool addSubscriber(rapidjson::Value &v)``` **shall** construct a ```Subscriber``` method from the provided JSON and, if construction is successful, add it to ```subscribers``` and return true.

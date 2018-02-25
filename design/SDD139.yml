@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.6.3.2
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```virtual ACTable buildReport()``` **shall** produce a table for the AppCast report.

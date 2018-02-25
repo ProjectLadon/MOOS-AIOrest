@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 1.4
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  This software **shall** use [cppcoder](https://github.com/tplgy/cppcodec) for Base64 encoding/decoding.

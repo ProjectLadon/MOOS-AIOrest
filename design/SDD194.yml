@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 5.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The ```OnConnectToServer()``` method **shall** iterate through the members of ```publishers``` and call the ```subscribe()``` method of each one.

@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.1.2.3.4
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  Returned JSON **shall** be parsed and returned. If it does not parse, this method **shall** return ```nullptr```.

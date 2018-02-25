@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.1.2.6.2
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  If ```msg.GetKey() == latVar```, this method **shall** store the value in the ```lat``` member.

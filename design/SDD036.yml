@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.1.2.5.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  This method **shall** call the ```poll()``` method of each member of ```subscribers``` in turn.

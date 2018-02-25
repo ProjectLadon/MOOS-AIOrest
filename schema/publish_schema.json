@@ -9,7 +9,7 @@
 			"$comment": "If this is true, the publish routine skips this variable if it has not changed since the last transmission."
 		},
 		"variable":{
-			"type":"name", 
+			"type":"string",
 			"$comment":"This must be the name of a variable that exists in the MOOS community",
 			"$comment":"It will be subscribed from MOOSDB and published to AIO on the given feed"
 		},

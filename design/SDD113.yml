@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.4.3.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```double data``` **shall** store the data to publish.

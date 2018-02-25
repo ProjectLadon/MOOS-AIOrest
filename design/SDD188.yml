@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 3.3
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```int subFrequency``` **shall** store the number of times per minutes to poll for incoming data. It **shall** default to the value of ```pubFrequency```.

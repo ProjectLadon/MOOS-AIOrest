@@ -8,7 +8,9 @@
 			"format":"uri"
 		},
 		"username":{"type":"string"},
-		"key":{"type":"string"}
+		"key":{"type":"string"},
+		"latVar":{"type":"string"},
+		"lonVar":{"type":"string"}
 	},
 	"required":["url","username","key"],
 	"additionalProperties":false

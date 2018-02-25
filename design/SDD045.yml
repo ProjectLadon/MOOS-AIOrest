@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.1.2.9
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```bool addPublisher(rapidjson::Value &v)``` **shall** construct a ```Publisher``` method from the provided JSON and, if construction is successful, add it to ```publishers``` and return true.

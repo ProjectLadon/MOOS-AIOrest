@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.6.5.5
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```long int lastEpoch``` **shall** store the value of the ```created_epoch``` item in the last data item returned

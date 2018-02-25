@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.1.2.11
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```const std::string &getURL()``` **shall** return a reference to the url member.

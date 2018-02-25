@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.6.5.3
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```std::string group``` **shall** store the name of the group which contains the target feed.

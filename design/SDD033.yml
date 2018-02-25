@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.1.2.4.3
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  This method **shall** increment ```publishPtr``` with wrap.

@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.1.4.6
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```std::string latVar``` **shall** store the latitude variable

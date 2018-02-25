@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.2.3.2
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```virtual bool procMail(CMOOSMsg &msg)``` **shall** compare the key of ```msg``` to the subscribed variable. If found, it **shall** store the data and return ```true```. Otherwise, it **shall** return ```false```.

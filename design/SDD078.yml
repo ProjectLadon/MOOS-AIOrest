@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.2.3.4
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```bool subscribe()``` **shall** subscribe to ```varName```.

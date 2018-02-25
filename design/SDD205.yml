@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 4.6
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  On any ```subscribe``` key, the software **shall** parse the value as JSON (exiting if parsing fails). If it successfully parses, it shall pass the resulting ```rapidjson::Document``` object to ```conf->addSubscriber()```. If it returns ```false```, the software **shall** exit with an error.

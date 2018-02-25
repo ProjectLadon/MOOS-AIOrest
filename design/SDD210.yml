@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 4.11
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  On a ```subFrequency``` key, the software **shall** attempt to extract an integer from the value and store it in ```subFrequency```.

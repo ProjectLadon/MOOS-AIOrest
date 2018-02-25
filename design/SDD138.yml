@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.6.3.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```virtual bool poll(AIOrest *a)``` **shall** poll Adafruit IO for updates to the subscribed feed and return ```true``` if it is successful and new data is present.

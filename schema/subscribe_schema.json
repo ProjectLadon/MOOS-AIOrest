@@ -5,7 +5,7 @@
 	"properties":{
 		"direction":"subscribe",
 		"variable":{
-			"type":"name", 
+			"type":"string",
 			"$comment":"This must be the name of a variable that does not exist in the MOOS community",
 			"$comment":"It will be published to MOOSDB from the given AIO feed"
 		},

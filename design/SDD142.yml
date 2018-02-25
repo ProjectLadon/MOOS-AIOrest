@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.6.4.2
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```bool isNew(long int epoch)``` **shall** compare the the value in ```lastEpoch``` to the given ```epoch``` and return ```true``` iff ```epoch > lastEpoch```.

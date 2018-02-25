@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 3.4
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```std::chrono::system_time lastPub``` **shall** store the time of the last successful publication.

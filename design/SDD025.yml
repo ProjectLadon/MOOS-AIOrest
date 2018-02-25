@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.1.2.3.0
+links: []
+normative: false
+ref: ''
+reviewed: null
+text: |
+  ```std::unique_ptr<rapidjson::Document> put(const std::string feed, const std::string group, const std::string data, int *httpcode = nullptr)```

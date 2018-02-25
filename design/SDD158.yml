@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.7.2.2
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```ACTable buildReport()``` **shall** return a two-column table with ```varName``` and "Last Time" as the headers and ```data``` and ```lastTime``` as the entries.

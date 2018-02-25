@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.1.2.2.3
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The https return code **shall** be stored in ```httpcode```, if present.

@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.3.3.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```std::string data``` **shall** store the data to publish.

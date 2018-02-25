@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.1.2.6.4
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  If any of these calls returns ```true```, this method **shall** return ```true```. Otherwise, it **shall** return ```false```.

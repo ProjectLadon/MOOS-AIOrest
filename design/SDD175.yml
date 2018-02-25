@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.9.1.1.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  This constructor **shall** set the ```iface``` member to the incoming ```iface``` value.

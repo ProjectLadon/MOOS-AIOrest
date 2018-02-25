@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.1.4.9
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```std::vector<std::unique_ptr<Subscriber>> subscribers``` stores the list of objects to subscribe to from the AIO server

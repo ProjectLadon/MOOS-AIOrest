@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.1.1.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```AIOconf(rapidjson::Document &d)``` **shall** validate ```d``` with the ```AIO_conf``` schema and populate the members of this object from it. If d does not pass validation, this method will force the program to exit immediately.

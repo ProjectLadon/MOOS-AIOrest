@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 6.2
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  If none of the ```procMail()``` methods return true and the message is not an appcast message, the software **shall** log an error.

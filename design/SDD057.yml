@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.1.4.3
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```std::string key``` **shall** store the Adafruit I/O API key

@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.1.4.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```std::string url``` **shall*** store the URL of the Adafruit I/O REST server

@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.9.4.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```std::vector<unsigned char> data``` **shall** store the last data received.

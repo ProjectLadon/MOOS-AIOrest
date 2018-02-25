@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 4.2
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The software **shall** exit with an error if an ```AIOconf``` key is not present in the startup block, or if it is unable to successfully parse the attached JSON.

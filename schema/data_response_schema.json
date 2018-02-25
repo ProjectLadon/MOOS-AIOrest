@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "id": "AIO_data_response",
+    "type": "object",
+    "properties": {
+        "id": {"type":"string"},
+        "value": {"type":"string"},
+        "feed_id": {"type":"number"},
+        "group_id": {"type":"number"},
+        "expiration": {"type":"string"},
+        "lat": {"type":"number"},
+        "lon": {"type":"number"},
+        "ele": {"type":"number"},
+        "completed_at": {"type":"string"},
+        "created_at": {"type":"string"},
+        "updated_at": {"type":"string"},
+        "created_epoch": {"type":"number"}
+    },
+    "required": ["id", "value", "created_at", "created_epoch"]
+}

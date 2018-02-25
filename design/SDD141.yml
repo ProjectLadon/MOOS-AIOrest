@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.6.4.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```bool isNew(std::string newTime)``` **shall** compare the the value in ```lastTime``` to ```newTime``` and return ```true``` iff they are not equal.

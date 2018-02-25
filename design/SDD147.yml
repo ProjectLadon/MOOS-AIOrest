@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.6.5.4
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```std::string lastTime``` **shall** store the value of the ```created_at```item in the last data item returned

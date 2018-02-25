@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.2.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The constructor for the base class **shall** be default

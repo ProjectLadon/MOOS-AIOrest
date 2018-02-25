@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.3.2.2
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```bool procMail(CMOOSMsg &msg)``` checks if ```msg.GetKey() == varName```. If it does, this method **shall** set ```data = msg.GetString()``` and return ```true```. Otherwise, it **shall** return ```false```.

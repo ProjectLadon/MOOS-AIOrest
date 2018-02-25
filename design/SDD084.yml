@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.2.5.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```bool fresh``` **shall** be true if new data has been received from the MOOSDB but not yet published to Adafruit IO.

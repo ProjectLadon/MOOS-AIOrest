@@ -39,7 +39,7 @@ Specifying the REST key in this manner permits storing the sensitive username an
 			"$comment": "If this is true, the publish routine skips this variable if it has not changed since the last transmission. It defaults to true."
 		},
 		"variable":{
-			"type":"name", 
+			"type":"name",
 			"$comment":"This must be the name of a variable that exists in the MOOS community",
 			"$comment":"It will be subscribed from MOOSDB and published to AIO on the given feed"
 		},
@@ -54,8 +54,8 @@ Specifying the REST key in this manner permits storing the sensitive username an
 	"required":["direction","variable","varType","feed"]
 }
 ```
-* pubFile -- a path to a file containing an array of ```publish``` objects. This can be used in conjunction with zero or more ```publish``` entries. 
-* subscribe -- a JSON object conforming to the following schema that describes a variable to publish. This may occur one or more times. 
+* pubFile -- a path to a file containing an array of ```publish``` objects. This can be used in conjunction with zero or more ```publish``` entries.
+* subscribe -- a JSON object conforming to the following schema that describes a variable to publish. This may occur one or more times.
 ```
 {
 	"$schema": "http://json-schema.org/schema#",
@@ -64,7 +64,7 @@ Specifying the REST key in this manner permits storing the sensitive username an
 	"properties":{
 		"direction":"subscribe",
 		"variable":{
-			"type":"name", 
+			"type":"name",
 			"$comment":"This must be the name of a variable that does not exist in the MOOS community",
 			"$comment":"It will be published to MOOSDB from the given AIO feed"
 		},
@@ -80,16 +80,15 @@ Specifying the REST key in this manner permits storing the sensitive username an
 }
 ```
 * subFile -- a path to a file containing an array of ```subscribe``` objects. This can be used in conjunction with zero or more ```subscribe``` entries.
-* pubFile -- a path to a file containing an array of ```publish``` objects. This can be used in conjunction with zero or more ```publish``` entries.
-* confFile -- a path to a file containing an array of ```publish``` and/or ```subscribe``` objects. This can be used in conjunction with any other combination of publish and subscribe objects. 
+* confFile -- a path to a file containing an array of ```publish``` and/or ```subscribe``` objects. This can be used in conjunction with any other combination of publish and subscribe objects.
 * pubFrequency -- the number of times per minute to publish outgoing data. Defaults to 60.
-* subFrequency -- the number of times per minute to poll for incoming data. Defaults to same value as ```pubFrequency```. 
+* subFrequency -- the number of times per minute to poll for incoming data. Defaults to same value as ```pubFrequency```.
 
 ## Incoming and Outgoing Variables
 This is determined entirely by the publish and subscribe entries
 
 ## Outgoing Timing and Sequencing
-Since Adafruit.io has hard limits on how often data can be written, pAIOrest must obey them in order to work correctly. It maintains a list of outgoing variables and steps through them one by one at the speed dictated by ```pubFrequency```. If a variable has not been updated since the last time it was transmitted, pAIOrest will skip it until the next time it runs through the list. 
+Since Adafruit.io has hard limits on how often data can be written, pAIOrest must obey them in order to work correctly. It maintains a list of outgoing variables and steps through them one by one at the speed dictated by ```pubFrequency```. If a variable has not been updated since the last time it was transmitted, pAIOrest will skip it until the next time it runs through the list.
 
 ## Incoming Notifications
 A list of incoming variables is similarly maintained. pAIOrest polls for each one in turn at the frequency determined by ```subFrequency```.

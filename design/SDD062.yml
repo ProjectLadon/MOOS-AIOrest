@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.1.4.8
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```std::vector<std::unique_ptr<Publisher>> publishers``` stores the list of objects to publish to the AIO server

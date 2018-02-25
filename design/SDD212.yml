@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 7.2
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  On each tick, the software **shall** check whether ```60/pubFrequency``` seconds have passed since the time recorded in ```lastPub```. If so, it **shall** call ```conf->publish()``` and set ```lastPub``` to the current time if it returns ```true```.

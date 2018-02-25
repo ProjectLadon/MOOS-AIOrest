@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 6.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The ```OnNewMail()``` method **shall** iterate through the members of ```publishers``` and call the ```procMail()``` method of each one against each incoming message.

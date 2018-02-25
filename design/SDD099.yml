@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.3.2.3
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```ACTable buildReport()``` **shall** return a one-column table with ```varName``` as the header and ```data``` as the entry.

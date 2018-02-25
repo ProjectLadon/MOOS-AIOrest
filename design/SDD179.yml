@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.9.2.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```bool tick(AIOrest *a)``` **shall** call ```iface->get()``` against ```feed``` and ```group```. Iff successful, it **shall** pass the contents of the ```value``` key to ```decode()``` and return the result.

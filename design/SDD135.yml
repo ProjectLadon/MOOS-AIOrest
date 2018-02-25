@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.6.2.1.4
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  This method **shall** pass its arguments unaltered to the chosen constructor.

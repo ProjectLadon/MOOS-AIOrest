@@ -1,0 +1,9 @@
+active: true
+derived: false
+level: 2.2.3.5
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  ```bool isFresh()``` **shall** return the value of ```fresh```.
