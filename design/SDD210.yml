@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  On a ```subFrequency``` key, the software **shall** attempt to extract an integer from the value and store it in ```subFrequency```.
+  On a ``subFrequency`` key, the software **shall** attempt to extract an integer from the value and store it in ``subFrequency``.

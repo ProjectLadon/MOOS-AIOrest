@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```std::chrono::system_time lastPub``` **shall** store the time of the last successful publication.
+  ``std::chrono::system_time lastPub`` **shall** store the time of the last successful publication.

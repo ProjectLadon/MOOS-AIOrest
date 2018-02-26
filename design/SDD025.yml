@@ -6,4 +6,4 @@ normative: false
 ref: ''
 reviewed: null
 text: |
-  ```std::unique_ptr<rapidjson::Document> put(const std::string feed, const std::string group, const std::string data, int *httpcode = nullptr)```
+  ``std::unique_ptr<rapidjson::Document> put(const std::string feed, const std::string group, const std::string data, int *httpcode = nullptr)``

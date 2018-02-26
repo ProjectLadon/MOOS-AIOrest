@@ -6,4 +6,4 @@ normative: false
 ref: ''
 reviewed: null
 text: |
-  ```PublisherBinary``` class
+  ``PublisherBinary`` class

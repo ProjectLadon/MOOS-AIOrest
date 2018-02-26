@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```bool fresh``` **shall** be true if new data has been received from the MOOSDB but not yet published to Adafruit IO.
+  ``bool fresh`` **shall** be true if new data has been received from the MOOSDB but not yet published to Adafruit IO.

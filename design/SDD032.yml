@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  This method **shall** call the ```publish()``` method of the members of ```publishers``` that ```publishPtr``` currently points to.
+  This method **shall** call the ``publish()`` method of the members of ``publishers`` that ``publishPtr`` currently points to.

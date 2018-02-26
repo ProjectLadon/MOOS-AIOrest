@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  This method shall validate ```v``` against the ```AIO_publish``` schema, and return ```nullptr``` if it does not conform.
+  This method shall validate ``v`` against the ``AIO_publish`` schema, and return ``nullptr`` if it does not conform.

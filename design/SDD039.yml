@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  This method **shall** call the ```procMail()``` method of each member of the ```publishers()``` list.
+  This method **shall** call the ``procMail()`` method of each member of the ``publishers()`` list.

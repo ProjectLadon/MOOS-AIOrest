@@ -6,4 +6,4 @@ normative: false
 ref: ''
 reviewed: null
 text: |
-  ```std::unique_ptr<Publisher> publisherFactory(AIOconf *iface, rapidjson::Value &v)```
+  ``std::unique_ptr<Publisher> publisherFactory(AIOconf *iface, rapidjson::Value &v)``

@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  This method **shall** upload the value in ```data``` to the given ```feed``` and ```group```.
+  This method **shall** upload the value in ``data`` to the given ``feed`` and ``group``.

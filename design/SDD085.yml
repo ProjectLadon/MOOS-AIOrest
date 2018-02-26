@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```bool updateOnly``` **shall** be true if this item is intended to publish only on update.
+  ``bool updateOnly`` **shall** be true if this item is intended to publish only on update.

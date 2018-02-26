@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```double lon``` **shall** store the longitude
+  ``double lon`` **shall** store the longitude

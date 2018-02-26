@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```std::string data``` **shall** store the data to publish.
+  ``std::string data`` **shall** store the data to publish.

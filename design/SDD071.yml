@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```DOUBLE``` **shall** result in the construction of a ```PublisherDouble```, ```STRING``` **shall** result in construction of a ```PublisherString```, and ```BINARY``` **shall** result in construction of a ```PublisherBinary``` object.
+  ``DOUBLE`` **shall** result in the construction of a ``PublisherDouble``, ``STRING`` **shall** result in construction of a ``PublisherString``, and ``BINARY`` **shall** result in construction of a ``PublisherBinary`` object.

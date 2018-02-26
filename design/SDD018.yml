@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  This method **shall** parse and validate the returned JSON using the ```AIO_data_response``` schema.
+  This method **shall** parse and validate the returned JSON using the ``AIO_data_response`` schema.

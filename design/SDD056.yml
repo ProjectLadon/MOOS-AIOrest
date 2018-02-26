@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```std::string username``` **shall*** store the Adafruit I/O username
+  ``std::string username`` **shall*** store the Adafruit I/O username

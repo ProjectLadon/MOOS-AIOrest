@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```std::string feed``` **shall** store the name of the Adafruit IO feed to publish to
+  ``std::string feed`` **shall** store the name of the Adafruit IO feed to publish to

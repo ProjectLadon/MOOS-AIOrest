@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```std::iterator<std::vector<std::unique_ptr<Publisher>>> publishPtr``` is an iterator that points to the publish item that will be transmitted on the next call to ```publish()```.
+  ``std::iterator<std::vector<std::unique_ptr<Publisher>>> publishPtr`` is an iterator that points to the publish item that will be transmitted on the next call to ``publish()``.

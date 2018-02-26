@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```std::vector<unsigned char> data``` **shall** store the data to be published.
+  ``std::vector<unsigned char> data`` **shall** store the data to be published.

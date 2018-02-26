@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  If ```msg.GetKey() == latVar```, this method **shall** store the value in the ```lat``` member.
+  If ``msg.GetKey() == latVar``, this method **shall** store the value in the ``lat`` member.

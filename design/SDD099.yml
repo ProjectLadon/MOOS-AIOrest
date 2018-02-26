@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```ACTable buildReport()``` **shall** return a one-column table with ```varName``` as the header and ```data``` as the entry.
+  ``ACTable buildReport()`` **shall** return a one-column table with ``varName`` as the header and ``data`` as the entry.

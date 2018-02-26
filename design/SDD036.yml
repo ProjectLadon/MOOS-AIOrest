@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  This method **shall** call the ```poll()``` method of each member of ```subscribers``` in turn.
+  This method **shall** call the ``poll()`` method of each member of ``subscribers`` in turn.

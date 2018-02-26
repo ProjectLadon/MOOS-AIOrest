@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```std::string lastTime``` **shall** store the value of the ```created_at```item in the last data item returned
+  ``std::string lastTime`` **shall** store the value of the ``created_at``item in the last data item returned

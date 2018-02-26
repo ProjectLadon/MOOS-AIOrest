@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```const std::string &getURL()``` **shall** return a reference to the url member.
+  ``const std::string &getURL()`` **shall** return a reference to the url member.

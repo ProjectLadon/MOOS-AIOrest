@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```bool poll(AIOrest *a)``` **shall** call ```iface->get()``` against ```feed``` and ```group```. Iff successful, it **shall** write the contents of the ```value``` key to ```data``` and return ```true```.
+  ``bool poll(AIOrest *a)`` **shall** call ``iface->get()`` against ``feed`` and ``group``. Iff successful, it **shall** write the contents of the ``value`` key to ``data`` and return ``true``.

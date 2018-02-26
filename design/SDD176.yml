@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  The ```varName``` member **shall** be set to the value of ```variable```.
+  The ``varName`` member **shall** be set to the value of ``variable``.

@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```std::string group``` **shall** store the name of the group which contains the target feed.
+  ``std::string group`` **shall** store the name of the group which contains the target feed.

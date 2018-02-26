@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```void setFresh(bool n)``` sets ```fresh``` equal to ```n```
+  ``void setFresh(bool n)`` sets ``fresh`` equal to ``n``

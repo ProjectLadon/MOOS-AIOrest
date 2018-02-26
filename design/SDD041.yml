@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  If ```msg.GetKey() == lonVar```, this method **shall** store the value in the ```lon``` member.
+  If ``msg.GetKey() == lonVar``, this method **shall** store the value in the ``lon`` member.

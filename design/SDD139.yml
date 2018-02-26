@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```virtual ACTable buildReport()``` **shall** produce a table for the AppCast report.
+  ``virtual ACTable buildReport()`` **shall** produce a table for the AppCast report.

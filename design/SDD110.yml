@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```bool procMail(CMOOSMsg &msg)``` checks if ```msg.GetKey() == varName```. If it does, this method **shall** set ```data = msg.GetDouble()``` and return ```true```. Otherwise, it **shall** return ```false```.
+  ``bool procMail(CMOOSMsg &msg)`` checks if ``msg.GetKey() == varName``. If it does, this method **shall** set ``data = msg.GetDouble()`` and return ``true``. Otherwise, it **shall** return ``false``.

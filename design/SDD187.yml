@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```int pubFrequency``` **shall** store the number of times per minute to publish outgoing data. It **shall** default to 60.
+  ``int pubFrequency`` **shall** store the number of times per minute to publish outgoing data. It **shall** default to 60.

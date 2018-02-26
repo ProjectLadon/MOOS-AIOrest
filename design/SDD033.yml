@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  This method **shall** increment ```publishPtr``` with wrap.
+  This method **shall** increment ``publishPtr`` with wrap.

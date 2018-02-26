@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  THe ```feed```, ```group```, and ```updateOnly``` members shall be set to the values of the corresponding JSON keys.
+  THe ``feed``, ``group``, and ``updateOnly`` members shall be set to the values of the corresponding JSON keys.

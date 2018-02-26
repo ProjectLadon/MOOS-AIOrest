@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```std::string varName``` **shall** store the MOOSDB variable name.
+  ``std::string varName`` **shall** store the MOOSDB variable name.

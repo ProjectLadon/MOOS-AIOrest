@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```bool decode(std::string base64)``` **shall** decode the given string as URL-safe Base64 per RFC 4648 and store it in ```data```. It **shall** return ```true``` iff this operation succeeds.
+  ``bool decode(std::string base64)`` **shall** decode the given string as URL-safe Base64 per RFC 4648 and store it in ``data``. It **shall** return ``true`` iff this operation succeeds.

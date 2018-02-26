@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```std::string encode()``` **shall** return ```data``` encoded as URL-safe Base64 per RFC 4648.
+  ``std::string encode()`` **shall** return ``data`` encoded as URL-safe Base64 per RFC 4648.

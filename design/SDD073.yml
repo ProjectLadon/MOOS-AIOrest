@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  This method **shall** return a ```std::unique_ptr``` containing the constructed object.
+  This method **shall** return a ``std::unique_ptr`` containing the constructed object.

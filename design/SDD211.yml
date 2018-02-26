@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  On each tick, the software **shall** check whether ```60/subFrequency``` seconds have passed since the time recorded in ```lastSub```. If so, it **shall** call ```conf->poll(this)``` and set ```lastSub``` to the current time if it returns ```true```.
+  On each tick, the software **shall** check whether ``60/subFrequency`` seconds have passed since the time recorded in ``lastSub``. If so, it **shall** call ``conf->poll(this)`` and set ``lastSub`` to the current time if it returns ``true``.

@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```std::chrono::system_time lastSub``` **shall** store the time of the last successful subscription poll.
+  ``std::chrono::system_time lastSub`` **shall** store the time of the last successful subscription poll.

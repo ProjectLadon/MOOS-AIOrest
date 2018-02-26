@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  If ```request == nullptr```, it *shall** execute a GET request; otherwise, it **shall** execute a POST request with the given JSON as the body.
+  If ``request == nullptr``, it *shall** execute a GET request; otherwise, it **shall** execute a POST request with the given JSON as the body.

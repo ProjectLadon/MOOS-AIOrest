@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```std::string key``` **shall** store the Adafruit I/O API key
+  ``std::string key`` **shall** store the Adafruit I/O API key

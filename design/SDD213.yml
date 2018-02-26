@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  This method **shall** print a "Publisher" header, and follow it with the results of the ```buildReport()``` method of each member of ```conf->getPublishers()```.
+  This method **shall** print a "Publisher" header, and follow it with the results of the ``buildReport()`` method of each member of ``conf->getPublishers()``.

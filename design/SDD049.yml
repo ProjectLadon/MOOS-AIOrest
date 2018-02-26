@@ -6,4 +6,4 @@ normative: false
 ref: ''
 reviewed: null
 text: |
-  ```std::unique_ptr<rapidjson::Document> makeRequest (std::string url, rapidjson::Document *request)```
+  ``std::unique_ptr<rapidjson::Document> makeRequest (std::string url, rapidjson::Document *request)``

@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```double data``` **shall** store the last data received.
+  ``double data`` **shall** store the last data received.

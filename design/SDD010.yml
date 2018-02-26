@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  The cmake list **shall** generate a target that compiles and runs the tests called ```test```.
+  The cmake list **shall** generate a target that compiles and runs the tests called ``test``.

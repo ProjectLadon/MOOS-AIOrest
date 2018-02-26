@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```double lat``` **shall** store the latitude
+  ``double lat`` **shall** store the latitude

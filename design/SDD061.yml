@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```std::string lonVar``` **shall** store the longitude variable
+  ``std::string lonVar`` **shall** store the longitude variable

@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  The ```OnConnectToServer()``` method **shall** iterate through the members of ```publishers``` and call the ```subscribe()``` method of each one.
+  The ``OnConnectToServer()`` method **shall** iterate through the members of ``publishers`` and call the ``subscribe()`` method of each one.

@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```long int lastEpoch``` **shall** store the value of the ```created_epoch``` item in the last data item returned
+  ``long int lastEpoch`` **shall** store the value of the ``created_epoch`` item in the last data item returned

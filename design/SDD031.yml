@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  This method **shall** call the ```isUpdateOnly()``` method of the element of ```publishers``` that the ```publishPtr``` currently points to. If it is ```true```, this method **shall** check if the element ```isFresh()```. If this is false, this method **shall** iterate through the ```publishers``` vector, wrapping around once, until it either finds an element that passes these tests or reaches its starting point. If it reaches the starting point, this method **shall** return ```false```.
+  This method **shall** call the ``isUpdateOnly()`` method of the element of ``publishers`` that the ``publishPtr`` currently points to. If it is ``true``, this method **shall** check if the element ``isFresh()``. If this is false, this method **shall** iterate through the ``publishers`` vector, wrapping around once, until it either finds an element that passes these tests or reaches its starting point. If it reaches the starting point, this method **shall** return ``false``.

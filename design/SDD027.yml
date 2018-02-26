@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  This data **shall** be tagged with the provided ```lat``` and ```lon```.
+  This data **shall** be tagged with the provided ``lat`` and ``lon``.

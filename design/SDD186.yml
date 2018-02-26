@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```AIOconf conf``` **shall** store the interface configuration and the vectors of publish and subscribe objects.
+  ``AIOconf conf`` **shall** store the interface configuration and the vectors of publish and subscribe objects.

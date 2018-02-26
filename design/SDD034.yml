@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  This method **shall** return the value returned by the ```publish()``` call.
+  This method **shall** return the value returned by the ``publish()`` call.

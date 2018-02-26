@@ -6,4 +6,4 @@ normative: false
 ref: ''
 reviewed: null
 text: |
-  ```SubscriberBinary(AIOconf *iface, rapidjson::Value &v)```
+  ``SubscriberBinary(AIOconf *iface, rapidjson::Value &v)``

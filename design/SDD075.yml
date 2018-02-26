@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```virtual bool publish()``` **shall** publish the stored data to Adafruit IO and returns ```true``` if successful.
+  ``virtual bool publish()`` **shall** publish the stored data to Adafruit IO and returns ``true`` if successful.

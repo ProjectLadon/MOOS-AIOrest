@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```bool addPublisher(rapidjson::Value &v)``` **shall** construct a ```Publisher``` method from the provided JSON and, if construction is successful, add it to ```publishers``` and return true.
+  ``bool addPublisher(rapidjson::Value &v)`` **shall** construct a ``Publisher`` method from the provided JSON and, if construction is successful, add it to ``publishers`` and return true.

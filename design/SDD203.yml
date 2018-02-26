@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  The software **shall** exit with an error if the configuration block does not contain at least one of ```publish```, ```subscribe```, ```pubFile```, ```subFile```, or ```confFile```.
+  The software **shall** exit with an error if the configuration block does not contain at least one of ``publish``, ``subscribe``, ``pubFile``, ``subFile``, or ``confFile``.

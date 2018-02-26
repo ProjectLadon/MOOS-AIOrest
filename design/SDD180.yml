@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```ACTable buildReport()``` **shall** return a two-column table with ```varName``` and "Last Time" as the headers and a hex dump of ```data``` and ```lastTime``` as the entries.
+  ``ACTable buildReport()`` **shall** return a two-column table with ``varName`` and "Last Time" as the headers and a hex dump of ``data`` and ``lastTime`` as the entries.

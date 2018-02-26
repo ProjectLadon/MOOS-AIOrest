@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```bool isNew(std::string newTime)``` **shall** compare the the value in ```lastTime``` to ```newTime``` and return ```true``` iff they are not equal.
+  ``bool isNew(std::string newTime)`` **shall** compare the the value in ``lastTime`` to ``newTime`` and return ``true`` iff they are not equal.

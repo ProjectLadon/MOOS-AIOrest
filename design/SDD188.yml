@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```int subFrequency``` **shall** store the number of times per minutes to poll for incoming data. It **shall** default to the value of ```pubFrequency```.
+  ``int subFrequency`` **shall** store the number of times per minutes to poll for incoming data. It **shall** default to the value of ``pubFrequency``.

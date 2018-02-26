@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```bool isFresh()``` **shall** return the value of ```fresh```.
+  ``bool isFresh()`` **shall** return the value of ``fresh``.

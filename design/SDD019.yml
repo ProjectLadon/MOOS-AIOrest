@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  If it does not parse or fails validation, this method **shall** return ```nullptr```.
+  If it does not parse or fails validation, this method **shall** return ``nullptr``.

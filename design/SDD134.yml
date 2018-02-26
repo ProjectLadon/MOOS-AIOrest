@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```DOUBLE``` **shall** result in the construction of a ```SubscriberDouble```, ```STRING``` **shall** result in construction of a ```SubscriberString```, and ```BINARY``` **shall** result in construction of a ```SubscriberBinary``` object.
+  ``DOUBLE`` **shall** result in the construction of a ``SubscriberDouble``, ``STRING`` **shall** result in construction of a ``SubscriberString``, and ``BINARY`` **shall** result in construction of a ``SubscriberBinary`` object.

@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```AIOconf *iface``` **shall** store a pointer to the interface.
+  ``AIOconf *iface`` **shall** store a pointer to the interface.

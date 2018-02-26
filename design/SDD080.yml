@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```bool isUpdateOnly()``` **shall** return the value of ```updateOnly```
+  ``bool isUpdateOnly()`` **shall** return the value of ``updateOnly``

@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```std::string data``` shall store the data received
+  ``std::string data`` shall store the data received

@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  ```bool tick(AIOrest *a)``` **shall** call ```iface->get()``` against ```feed``` and ```group```. Iff successful, it **shall** parse the contents of the ```value``` key into a double, store it in ```data```, and return ```true```.
+  ``bool tick(AIOrest *a)`` **shall** call ``iface->get()`` against ``feed`` and ``group``. Iff successful, it **shall** parse the contents of the ``value`` key into a double, store it in ``data``, and return ``true``.

@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  This constructor **shall** set the ```iface``` member to the incoming ```iface``` value.
+  This constructor **shall** set the ``iface`` member to the incoming ``iface`` value.

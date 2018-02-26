@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  If the response is not valid JSON, it **shall** return ```nullptr```.
+  If the response is not valid JSON, it **shall** return ``nullptr``.

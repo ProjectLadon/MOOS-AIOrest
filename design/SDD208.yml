@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  On any ```confFile``` key, the software **shall** attempt to load the named file and parse it as JSON (exiting if parsing fails). If it successfully parses and contains a JSON array, each element **shall** be passed to ```conf->addPublisher()``` and ```conf->addSubscriber()``` in turn. If the file does not contain a JSON array or both of these calls return ```false``` for any element, the softare **shall** exit with an error.
+  On any ``confFile`` key, the software **shall** attempt to load the named file and parse it as JSON (exiting if parsing fails). If it successfully parses and contains a JSON array, each element **shall** be passed to ``conf->addPublisher()`` and ``conf->addSubscriber()`` in turn. If the file does not contain a JSON array or both of these calls return ``false`` for any element, the softare **shall** exit with an error.

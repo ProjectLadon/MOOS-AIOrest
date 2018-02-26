@@ -6,4 +6,4 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  On any ```subFile``` key, the software **shall** attempt to load the named file and parse it as JSON (exiting if parsing fails). If it successfully parses and contains a JSON array, it **shall** pass each element of that array to ```conf->addSubscriber()```. If it does not contain an array or any return ```false```, the software **shall** exit with an error.
+  On any ``subFile`` key, the software **shall** attempt to load the named file and parse it as JSON (exiting if parsing fails). If it successfully parses and contains a JSON array, it **shall** pass each element of that array to ``conf->addSubscriber()``. If it does not contain an array or any return ``false``, the software **shall** exit with an error.
