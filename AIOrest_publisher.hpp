@@ -11,6 +11,9 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include "rapidjson/rapidjson.h"
+#include "rapidjson/document.h"
+#include "rapidjson/schema.h"
 #include "MOOS/libMOOS/Thirdparty/AppCasting/AppCastingMOOSApp.h"
 
 class AIOrest;  // forward declared because we only use the pointers here
@@ -22,10 +25,9 @@ class Publisher {
         virtual bool publish() = 0;
         virtual bool procMail(CMOOSMsg &msg) = 0;
         virtual ACTable buildReport() = 0;
-        bool subscribe();
+        bool subscribe(AIOrest *a);
         bool isFresh() {return fresh;};
         bool isUpdateOnly {return updateOnly;};
-
 
     protected:  // methods
         Publisher() {};
@@ -37,11 +39,15 @@ class Publisher {
         std::string feed;
         std::string group;
         AIOconf *iface;
+
+    private:
+        static std::unique_ptr<rapidjson::SchemaDocument> publisher_schema;
+        static std::unique_ptr<rapidjson::Validator> publisher_validator;
 };
 
 class PublisherString : public Publisher {
     public:
-        PublisherString(rapidjson::Value &v);
+        PublisherString(AIOconf *iface, rapidjson::Value &v);
         bool publish();
         bool procMail(CMOOSMsg &msg);
         ACTable buildReport();
@@ -52,7 +58,7 @@ class PublisherString : public Publisher {
 
 class PublisherDouble : public Publisher {
     public:
-        PublisherDouble(rapidjson::Value &v);
+        PublisherDouble(AIOconf *iface, rapidjson::Value &v);
         bool publish();
         bool procMail(CMOOSMsg &msg);
         ACTable buildReport();
@@ -63,7 +69,7 @@ class PublisherDouble : public Publisher {
 
 class PublisherBinary : public Publisher {
     public:
-        PublisherBinary(rapidjson::Value &v);
+        PublisherBinary(AIOconf *iface, rapidjson::Value &v);
         bool publish();
         bool procMail(CMOOSMsg &msg);
         ACTable buildReport();

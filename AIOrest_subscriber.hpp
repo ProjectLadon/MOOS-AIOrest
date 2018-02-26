@@ -33,12 +33,19 @@ class Subscriber {
         std::string lastTime;
         long int lastEpoch;
         AIOconf *iface;
+        static std::unique_ptr<rapidjson::SchemaDocument> data_schema;
+        static std::unique_ptr<rapidjson::Validator> data_validator;
+
+    private:
+        static void createValidators();
+        static std::unique_ptr<rapidjson::SchemaDocument> subscriber_schema;
+        static std::unique_ptr<rapidjson::Validator> subscriber_validator;
 };
 
 class SubscriberString : public Subscriber {
     public:
-        SubscriberString(rapidjson::Value &v);
-        bool poll();
+        SubscriberString(AIOconf *iface, rapidjson::Value &v);
+        bool poll(AIOrest* a);
         ACTable buildReport();
 
     private:    // members
@@ -47,8 +54,8 @@ class SubscriberString : public Subscriber {
 
 class SubscriberDouble : public Subscriber {
     public:
-        SubscriberDouble(rapidjson::Value &v);
-        bool poll();
+        SubscriberDouble(AIOconf *iface, rapidjson::Value &v);
+        bool poll(AIOrest* a);
         ACTable buildReport();
 
     private:    // members
@@ -57,11 +64,11 @@ class SubscriberDouble : public Subscriber {
 
 class SubscriberBinary : public Subscriber {
     public:
-        SubscriberBinary(rapidjson::Value &v);
-        bool poll();
+        SubscriberBinary(AIOconf *iface, rapidjson::Value &v);
+        bool poll(AIOrest* a);
         ACTable buildReport();
 
     private:  // members
-        std::string encode()
+        bool decode(std::string incoming);
         std::vector<unsigned char> data;
 };

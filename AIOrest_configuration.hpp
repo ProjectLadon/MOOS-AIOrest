@@ -9,6 +9,8 @@
 #define AIOrest_Configuration_HEADER
 
 #include <string>
+#include <vector>
+#include <memory>
 #include "AIOrest_publisher.hpp"
 #include "AIOrest_subscriber.hpp"
 #include "MOOS/libMOOS/Thirdparty/AppCasting/AppCastingMOOSApp.h"
@@ -19,7 +21,7 @@ class AIOconf {
     public:
         AIOconf(rapidjson::Document &d);
         std::unique_ptr<rapidjson::Document> get(std::string feed, std::string group);
-        std::unique_ptr<rapidjson::Document> put(const std::string feed, const td::string group, const double data, int *httpcode = nullptr);
+        std::unique_ptr<rapidjson::Document> put(const std::string feed, const std::string group, const double data, int *httpcode = nullptr);
         std::unique_ptr<rapidjson::Document> put(const std::string feed, const std::string group, const std::string data, int *httpcode = nullptr);
         bool publish();
         bool poll(AIOrest *a);

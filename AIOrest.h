@@ -29,7 +29,7 @@ class AIOrest : public AppCastingMOOSApp
         bool notify(const std::string &var, const std::vector<unsigned char> &val) {
             Notify(var, val);
         };
-        bool registerVar(const std::string &var) {Register(var);};
+        bool registerVar(const std::string &var) {return Register(var);};
 
     protected: // Standard MOOSApp functions to overload
         bool OnNewMail(MOOSMSG_LIST &NewMail);

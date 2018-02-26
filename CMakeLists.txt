@@ -13,12 +13,14 @@ set(JSON_SCHEMA_FILES
   ${CMAKE_CURRENT_SOURCE_DIR}/schema/configuration_schema.json
   ${CMAKE_CURRENT_SOURCE_DIR}/schema/publish_schema.json
   ${CMAKE_CURRENT_SOURCE_DIR}/schema/subscribe_schema.json
+  ${CMAKE_CURRENT_SOURCE_DIR}/schema/data_response_schema.json
 
 # List of schema files
 set(JSON_HEADER_FILES
   ${CMAKE_CURRENT_SOURCE_DIR}/schema/configuration_schema.h
   ${CMAKE_CURRENT_SOURCE_DIR}/schema/publish_schema.h
   ${CMAKE_CURRENT_SOURCE_DIR}/schema/subscribe_schema.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/schema/data_response_schema.h
 
 FOREACH(LOOP_SCHEMA ${JSON_SCHEMA_FILES})
 	get_filename_component(LOOP_DIR ${LOOP_SCHEMA} DIRECTORY)
@@ -34,10 +36,17 @@ SET(SRC
     AIOrest.cpp
     AIOrest_Info.cpp
     main.cpp
+    AIOrest_configuration.cpp
+    AIOrest_publisher.cpp
+    AIOrest_subscriber.cpp
     "${JSON_HEADER_FILES}"
 )
 
 ADD_EXECUTABLE(pAIOrest ${SRC})
+
+target_include_directories(pAIOrest PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/cppcodec
+)
 
 TARGET_LINK_LIBRARIES(pAIOrest
     ${MOOS_LIBRARIES}
