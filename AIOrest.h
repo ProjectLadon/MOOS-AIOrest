@@ -10,6 +10,7 @@
 
 #include "MOOS/libMOOS/Thirdparty/AppCasting/AppCastingMOOSApp.h"
 #include "AIOrest_configuration.hpp"
+#include "rapidjson/rapidjson.h"
 #include <memory>
 #include <chrono>
 #include <string>
@@ -39,9 +40,11 @@ class AIOrest : public AppCastingMOOSApp
 
     protected: // Standard AppCastingMOOSApp function to overload
         bool buildReport();
-
-    protected:
         void registerVariables();
+
+    protected: // Own functions
+        std::unique_ptr<rapidjson::Document> loadFile(std::string path);
+        std::unique_ptr<rapidjson::Document> parseJSON(std::string jsonstring);
 
     private: // Configuration variables
         std::unique_ptr<AIOconf> conf;
@@ -49,8 +52,8 @@ class AIOrest : public AppCastingMOOSApp
         int subFrequency = 60;
 
     private: // State variables
-        std::chrono::system_time lastPub;
-        std::chrono::system_time lastSub;
+        std::chrono::time_point<std::chrono::system_clock> lastPub;
+        std::chrono::time_point<std::chrono::system_clock> lastSub;
 };
 
 #endif

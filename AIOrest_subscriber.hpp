@@ -12,6 +12,7 @@
 #include <vector>
 #include <memory>
 #include "MOOS/libMOOS/Thirdparty/AppCasting/AppCastingMOOSApp.h"
+#include "ACTable.h"
 
 class AIOrest;  // forward declared because we only use the pointers here
 class AIOconf;  // forward declared because we only use the pointers here
@@ -34,12 +35,12 @@ class Subscriber {
         long int lastEpoch;
         AIOconf *iface;
         static std::unique_ptr<rapidjson::SchemaDocument> data_schema;
-        static std::unique_ptr<rapidjson::Validator> data_validator;
+        static std::unique_ptr<rapidjson::SchemaValidator> data_validator;
 
     private:
         static void createValidators();
         static std::unique_ptr<rapidjson::SchemaDocument> subscriber_schema;
-        static std::unique_ptr<rapidjson::Validator> subscriber_validator;
+        static std::unique_ptr<rapidjson::SchemaValidator> subscriber_validator;
 };
 
 class SubscriberString : public Subscriber {
@@ -72,3 +73,5 @@ class SubscriberBinary : public Subscriber {
         bool decode(std::string incoming);
         std::vector<unsigned char> data;
 };
+
+#endif

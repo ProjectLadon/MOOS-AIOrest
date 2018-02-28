@@ -15,6 +15,7 @@
 #include "rapidjson/document.h"
 #include "rapidjson/schema.h"
 #include "MOOS/libMOOS/Thirdparty/AppCasting/AppCastingMOOSApp.h"
+#include "ACTable.h"
 
 class AIOrest;  // forward declared because we only use the pointers here
 class AIOconf;  // forward declared because we only use the pointers here
@@ -27,7 +28,7 @@ class Publisher {
         virtual ACTable buildReport() = 0;
         bool subscribe(AIOrest *a);
         bool isFresh() {return fresh;};
-        bool isUpdateOnly {return updateOnly;};
+        bool isUpdateOnly() {return updateOnly;};
 
     protected:  // methods
         Publisher() {};
@@ -42,7 +43,7 @@ class Publisher {
 
     private:
         static std::unique_ptr<rapidjson::SchemaDocument> publisher_schema;
-        static std::unique_ptr<rapidjson::Validator> publisher_validator;
+        static std::unique_ptr<rapidjson::SchemaValidator> publisher_validator;
 };
 
 class PublisherString : public Publisher {
@@ -78,3 +79,5 @@ class PublisherBinary : public Publisher {
         std::string encode();
         std::vector<unsigned char> data;
 };
+
+#endif

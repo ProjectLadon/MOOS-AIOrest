@@ -23,29 +23,33 @@
 #include "cppcodec/base64_url.hpp"
 #include "MOOS/libMOOS/Thirdparty/AppCasting/AppCastingMOOSApp.h"
 
+extern "C" {    // included for return value #defines
+	#include <curl/curl.h>
+}
+
 using namespace std;
 using namespace rapidjson;
 
 std::unique_ptr<Publisher> Publisher::publisherFactory(AIOconf *iface, rapidjson::Value &v) {
     if (!publisher_validator) { // If we haven't created the schema validator yet, create it
         rapidjson::Document d;
-        if (d.Parse(reinterpret_cast<char*>(publish_schema_json), publish_schema_json_len)).HasParseError()) {
+        if (d.Parse(reinterpret_cast<char*>(publish_schema_json), publish_schema_json_len).HasParseError()) {
             cerr << "JSON parse error " << GetParseError_En(d.GetParseError());
             cerr << " in publisher schema at offset " << d.GetErrorOffset() << endl;
-            std::exit();
+            std::exit(-1);
         }
         publisher_schema.reset(new rapidjson::SchemaDocument(d));
-        publisher_validator.reset(new rapidjson::Validator(publisher_schema));
+        publisher_validator.reset(new rapidjson::SchemaValidator(*publisher_schema));
     }
     if (!v.Accept(*publisher_validator)) { // Validate the incoming JSON
         StringBuffer sb;
-        publisher_validator.GetInvalidSchemaPointer().StringifyUriFragment(sb);
+        publisher_validator->GetInvalidSchemaPointer().StringifyUriFragment(sb);
         cerr << "Invalid configuration schema: " << sb.GetString() << endl;
-        cerr << "Invalid keyword: " << publisher_validator.GetInvalidSchemaKeyword() << endl;
+        cerr << "Invalid keyword: " << publisher_validator->GetInvalidSchemaKeyword() << endl;
         sb.Clear();
-        publisher_validator.GetInvalidDocumentPointer().StringifyUriFragment(sb);
+        publisher_validator->GetInvalidDocumentPointer().StringifyUriFragment(sb);
         cerr << "Invalid document: " << sb.GetString() << endl;
-        std::exit();
+        std::exit(-1);
     }
     if (v["varType"].GetString() == "DOUBLE") {
         return std::unique_ptr<Publisher>(new PublisherDouble(iface, v));
@@ -59,7 +63,8 @@ std::unique_ptr<Publisher> Publisher::publisherFactory(AIOconf *iface, rapidjson
 
 bool Publisher::subscribe(AIOrest *a) {return a->registerVar(varName);}
 
-PublisherString::PublisherString(AIOconf *iface, rapidjson::Value &v) : iface(iface) {
+PublisherString::PublisherString(AIOconf *_iface, rapidjson::Value &v) {
+    iface = _iface;
     fresh = false;
     if (v.HasMember("updateOnly")) {
         updateOnly = v["updateOnly"].GetBool();
@@ -73,8 +78,8 @@ PublisherString::PublisherString(AIOconf *iface, rapidjson::Value &v) : iface(if
 
 bool PublisherString::publish() {
     int code = 0;
-    auto result = iface->put(feed, group, data, code);
-    if ((code < 200) || (code > 299)) return false;
+    auto result = iface->put(feed, group, data, &code);
+    if (code != CURLE_OK) return false;
     if (!result) return false;
     return true;
 }
@@ -95,7 +100,8 @@ ACTable PublisherString::buildReport() {
     return tab;
 }
 
-PublisherDouble::PublisherDouble(AIOconf *iface, rapidjson::Value &v) : iface(iface) {
+PublisherDouble::PublisherDouble(AIOconf *_iface, rapidjson::Value &v) {
+    iface = _iface;
     fresh = false;
     if (v.HasMember("updateOnly")) {
         updateOnly = v["updateOnly"].GetBool();
@@ -109,8 +115,8 @@ PublisherDouble::PublisherDouble(AIOconf *iface, rapidjson::Value &v) : iface(if
 
 bool PublisherDouble::publish() {
     int code = 0;
-    auto result = iface->put(feed, group, data, code);
-    if ((code < 200) || (code > 299)) return false;
+    auto result = iface->put(feed, group, to_string(data), &code);
+    if (code != CURLE_OK) return false;
     if (!result) return false;
     return true;
 }
@@ -131,7 +137,8 @@ ACTable PublisherDouble::buildReport() {
     return tab;
 }
 
-PublisherBinary::PublisherBinary(AIOconf *iface, rapidjson::Value &v) : iface(iface) {
+PublisherBinary::PublisherBinary(AIOconf *_iface, rapidjson::Value &v) {
+    iface = _iface;
     fresh = false;
     if (v.HasMember("updateOnly")) {
         updateOnly = v["updateOnly"].GetBool();
@@ -145,8 +152,8 @@ PublisherBinary::PublisherBinary(AIOconf *iface, rapidjson::Value &v) : iface(if
 
 bool PublisherBinary::publish() {
     int code = 0;
-    auto result = iface->put(feed, group, data, code);
-    if ((code < 200) || (code > 299)) return false;
+    auto result = iface->put(feed, group, encode(), &code);
+    if (code != CURLE_OK) return false;
     if (!result) return false;
     return true;
 }

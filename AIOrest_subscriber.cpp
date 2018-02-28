@@ -31,13 +31,13 @@ std::unique_ptr<Subscriber> Subscriber::subscriberFactory(AIOconf *iface, rapidj
     if (!subscriber_validator) createValidators();
     if (!v.Accept(*subscriber_validator)) { // Validate the incoming JSON
         StringBuffer sb;
-        subscriber_validator.GetInvalidSchemaPointer().StringifyUriFragment(sb);
+        subscriber_validator->GetInvalidSchemaPointer().StringifyUriFragment(sb);
         cerr << "Invalid configuration schema: " << sb.GetString() << endl;
-        cerr << "Invalid keyword: " << subscriber_validator.GetInvalidSchemaKeyword() << endl;
+        cerr << "Invalid keyword: " << subscriber_validator->GetInvalidSchemaKeyword() << endl;
         sb.Clear();
-        subscriber_validator.GetInvalidDocumentPointer().StringifyUriFragment(sb);
+        subscriber_validator->GetInvalidDocumentPointer().StringifyUriFragment(sb);
         cerr << "Invalid document: " << sb.GetString() << endl;
-        std::exit();
+        std::exit(-1);
     }
     if (v["varType"].GetString() == "DOUBLE") {
         return std::unique_ptr<Subscriber>(new SubscriberDouble(iface, v));
@@ -51,27 +51,24 @@ std::unique_ptr<Subscriber> Subscriber::subscriberFactory(AIOconf *iface, rapidj
 
 void Subscriber::createValidators() {
     rapidjson::Document d, e;
-        if (d.Parse(reinterpret_cast<char*>(subscribe_schema_json), subscribe_schema_json_len)).HasParseError()) {
+        if (d.Parse(reinterpret_cast<char*>(subscribe_schema_json), subscribe_schema_json_len).HasParseError()) {
             cerr << "JSON parse error " << GetParseError_En(d.GetParseError());
             cerr << " in subscriber schema at offset " << d.GetErrorOffset() << endl;
-            std::exit();
+            std::exit(-1);
         }
-        if (e.Parse(reinterpret_cast<char*>(data_response_schema_json), data_response_schema_json_len)).HasParseError()) {
+        if (e.Parse(reinterpret_cast<char*>(data_response_schema_json), data_response_schema_json_len).HasParseError()) {
             cerr << "JSON parse error " << GetParseError_En(e.GetParseError());
             cerr << " in data response schema at offset " << e.GetErrorOffset() << endl;
-            std::exit();
+            std::exit(-1);
         }
         subscriber_schema.reset(new rapidjson::SchemaDocument(d));
         data_schema.reset(new rapidjson::SchemaDocument(e));
-        subscriber_validator.reset(new rapidjson::Validator(subscriber_schema));
-        data_validator.reset(new rapidjson::Validator(data_schema));
+        subscriber_validator.reset(new rapidjson::SchemaValidator(*subscriber_schema));
+        data_validator.reset(new rapidjson::SchemaValidator(*data_schema));
 }
 
-SubscriberString::SubscriberString(AIOconf *iface, rapidjson::Value &v) : iface(iface) {
-    fresh = false;
-    if (v.HasMember("updateOnly")) {
-        updateOnly = v["updateOnly"].GetBool();
-    } else updateOnly = false;
+SubscriberString::SubscriberString(AIOconf *_iface, rapidjson::Value &v) {
+    iface = _iface;
     if (v.HasMember("group")) {
         group = v["group"].GetString();
     } else group = "";
@@ -89,11 +86,11 @@ bool SubscriberString::poll(AIOrest* a) {
             a->notify(varName, data);
         } else {
             StringBuffer sb;
-            data_validator.GetInvalidSchemaPointer().StringifyUriFragment(sb);
+            data_validator->GetInvalidSchemaPointer().StringifyUriFragment(sb);
             cerr << "Invalid configuration schema: " << sb.GetString() << endl;
-            cerr << "Invalid keyword: " << data_validator.GetInvalidSchemaKeyword() << endl;
+            cerr << "Invalid keyword: " << data_validator->GetInvalidSchemaKeyword() << endl;
             sb.Clear();
-            data_validator.GetInvalidDocumentPointer().StringifyUriFragment(sb);
+            data_validator->GetInvalidDocumentPointer().StringifyUriFragment(sb);
             cerr << "Invalid document: " << sb.GetString() << endl;
         }
     }
@@ -108,11 +105,8 @@ ACTable SubscriberString::buildReport() {
     return tab;
 }
 
-SubscriberDouble::SubscriberDouble(AIOconf *iface, rapidjson::Value &v) : iface(iface) {
-    fresh = false;
-    if (v.HasMember("updateOnly")) {
-        updateOnly = v["updateOnly"].GetBool();
-    } else updateOnly = false;
+SubscriberDouble::SubscriberDouble(AIOconf *_iface, rapidjson::Value &v) {
+    iface = _iface;
     if (v.HasMember("group")) {
         group = v["group"].GetString();
     } else group = "";
@@ -130,11 +124,11 @@ bool SubscriberDouble::poll(AIOrest* a) {
             a->notify(varName, data);
         } else {
             StringBuffer sb;
-            data_validator.GetInvalidSchemaPointer().StringifyUriFragment(sb);
+            data_validator->GetInvalidSchemaPointer().StringifyUriFragment(sb);
             cerr << "Invalid configuration schema: " << sb.GetString() << endl;
-            cerr << "Invalid keyword: " << data_validator.GetInvalidSchemaKeyword() << endl;
+            cerr << "Invalid keyword: " << data_validator->GetInvalidSchemaKeyword() << endl;
             sb.Clear();
-            data_validator.GetInvalidDocumentPointer().StringifyUriFragment(sb);
+            data_validator->GetInvalidDocumentPointer().StringifyUriFragment(sb);
             cerr << "Invalid document: " << sb.GetString() << endl;
         }
     }
@@ -149,11 +143,8 @@ ACTable SubscriberDouble::buildReport() {
     return tab;
 }
 
-SubscriberBinary::SubscriberBinaryAIOrest* a(AIOconf *iface, rapidjson::Value &v) : iface(iface) {
-    fresh = false;
-    if (v.HasMember("updateOnly")) {
-        updateOnly = v["updateOnly"].GetBool();
-    } else updateOnly = false;
+SubscriberBinary::SubscriberBinary(AIOconf *_iface, rapidjson::Value &v) {
+    iface = _iface;
     if (v.HasMember("group")) {
         group = v["group"].GetString();
     } else group = "";
@@ -172,11 +163,11 @@ bool SubscriberBinary::poll(AIOrest* a) {
             }
         } else {
             StringBuffer sb;
-            data_validator.GetInvalidSchemaPointer().StringifyUriFragment(sb);
+            data_validator->GetInvalidSchemaPointer().StringifyUriFragment(sb);
             cerr << "Invalid configuration schema: " << sb.GetString() << endl;
-            cerr << "Invalid keyword: " << data_validator.GetInvalidSchemaKeyword() << endl;
+            cerr << "Invalid keyword: " << data_validator->GetInvalidSchemaKeyword() << endl;
             sb.Clear();
-            data_validator.GetInvalidDocumentPointer().StringifyUriFragment(sb);
+            data_validator->GetInvalidDocumentPointer().StringifyUriFragment(sb);
             cerr << "Invalid document: " << sb.GetString() << endl;
         }
     }
