@@ -177,3 +177,6 @@ ACTable PublisherBinary::buildReport() {
 std::string PublisherBinary::encode() {
     return cppcodec::base64_url::encode(data.data(), data.size());
 }
+
+std::unique_ptr<rapidjson::SchemaDocument> Publisher::publisher_schema;
+std::unique_ptr<rapidjson::SchemaValidator> Publisher::publisher_validator;

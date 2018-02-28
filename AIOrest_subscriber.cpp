@@ -186,3 +186,8 @@ bool SubscriberBinary::decode(std::string incoming) {
     data = cppcodec::base64_url::decode(incoming.c_str(), incoming.size());
     return true;
 }
+
+std::unique_ptr<rapidjson::SchemaDocument> Subscriber::data_schema;
+std::unique_ptr<rapidjson::SchemaValidator> Subscriber::data_validator;
+std::unique_ptr<rapidjson::SchemaDocument> Subscriber::subscriber_schema;
+std::unique_ptr<rapidjson::SchemaValidator> Subscriber::subscriber_validator;

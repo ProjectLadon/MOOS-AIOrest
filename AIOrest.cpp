@@ -188,7 +188,7 @@ std::unique_ptr<rapidjson::Document> AIOrest::loadFile(std::string path) {
     return std::unique_ptr<rapidjson::Document>(nullptr);
 }
 
-std::unique_ptr<rapidjson::Document> parseJSON(std::string jsonstring) {
+std::unique_ptr<rapidjson::Document> AIOrest::parseJSON(std::string jsonstring) {
     std::unique_ptr<rapidjson::Document> result = std::unique_ptr<rapidjson::Document>(new rapidjson::Document);
     if (result->Parse(jsonstring.c_str()).HasParseError()) {
         cerr << "JSON parse error " << GetParseError_En(result->GetParseError());
